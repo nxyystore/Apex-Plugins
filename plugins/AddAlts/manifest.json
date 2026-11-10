@@ -1,0 +1,16 @@
+{
+	"format": 1,
+	"id": "codes.nxyy.addalts",
+	"name": "More Alts!",
+	"description": "Adds ability to safely add more alts to Discord, plus unlocks Discord's own native multi-account switcher.",
+	"author": "nxyy <1294504099965829205>",
+	"icon": "ic_full_server_gating_24px",
+	"version": "1.0.0",
+	"dependencies": {
+		"revenge.api": { "version": ">=1" },
+		"discord": { "version": "*" }
+	},
+	"dist": {
+		"script": "index.js"
+	}
+}

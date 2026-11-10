@@ -1,0 +1,18 @@
+{
+	"compilerOptions": {
+		// These configs only drive editor type-checking; the actual builds
+		// are handled by build.mjs (Vendetta) and the revenge-plugin CLI.
+		"noEmit": true,
+		"target": "ESNext",
+		"module": "ESNext",
+		"moduleResolution": "bundler",
+		"moduleDetection": "force",
+		"resolveJsonModule": true,
+		"esModuleInterop": true,
+		"jsx": "react-native",
+		"allowJs": true,
+		"checkJs": false,
+		"skipLibCheck": true,
+		"strict": false
+	}
+}

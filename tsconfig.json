@@ -1,12 +1,9 @@
 {
-    "compilerOptions": {
-        "outDir": "dist",
-        "target": "ESNext",
-        "module": "ESNext",
-        "moduleResolution": "node",
-        "esModuleInterop": true,
-        "jsx": "react-native",
-        "allowJs": true
-    },
-    "include": ["plugins", "node_modules/vendetta-types"]
+	"extends": "./tsconfig.base.json",
+	// vendetta-types' package.json points "types" at def.d.ts (missing an "s"),
+	// so the type library can't be loaded via compilerOptions.types; include
+	// its ambient defs.d.ts explicitly instead.
+	"files": ["node_modules/vendetta-types/defs.d.ts"],
+	"include": ["plugins"],
+	"exclude": ["plugins/AddAlts", "dist"]
 }

@@ -50,6 +50,14 @@ const plugins = [
 
 for (let plug of await readdir("./plugins")) {
     const manifest = JSON.parse(await readFile(`./plugins/${plug}/manifest.json`));
+
+    // Revenge-format plugins (no Vendetta "main") are built with the
+    // official Revenge Plugin CLI, see plugins/<id>/README.md
+    if (!manifest.main) {
+        console.log(`Skipping ${plug} (Revenge plugin, build with revenge-plugin CLI)`);
+        continue;
+    }
+
     const outPath = `./dist/${plug}/index.js`;
 
     try {
